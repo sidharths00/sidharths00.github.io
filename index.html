@@ -1,10 +1,102 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>My site</title>
-  </head>
-  <body>
-  	<h1>Hello</h1>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidharth Srinivasan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body class="page-home">
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">Sidharth</a>
+            <div class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="media.html">Media</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="section-content">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="greeting">Hi, my name is</p>
+                        <h1>Sidharth Srinivasan</h1>
+                        <p class="subtitle">I build innovative solutions at the intersection of technology and education.</p>
+                        <div class="social-links">
+                            <a href="mailto:sidharth@stanford.edu" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>sidharth@stanford.edu</span>
+                            </a>
+                            <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/headshot.jpeg" alt="Sidharth Srinivasan" class="headshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="section-content">
+                <h2><span class="section-number">01.</span> About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I'm a Computer Science student at Stanford University with a concentration in AI, passionate about building innovative technology solutions and driving entrepreneurial ventures.</p>
+                        <p>Currently, I'm leading Stanford's oldest student-run accelerator program at Cardinal Ventures while continuing to grow Trashbots, an edtech platform I co-founded that's now deployed in over 100 schools.</p>
+                        <p>My focus lies in creating scalable solutions that make a meaningful impact in education and technology.</p>
+                    </div>
+                </div>
+
+                <div class="quick-links">
+                    <div class="links-grid">
+                        <a href="projects.html" class="quick-link">
+                            <div class="quick-link-content">
+                                <i class="fas fa-code"></i>
+                                <h4>Projects</h4>
+                                <p>View my work in AI, web development, and creative projects</p>
+                            </div>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="resume.html" class="quick-link">
+                            <div class="quick-link-content">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Resume</h4>
+                                <p>See my experience, education, and skills</p>
+                            </div>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="contact.html" class="quick-link">
+                            <div class="quick-link-content">
+                                <i class="fas fa-envelope"></i>
+                                <h4>Contact</h4>
+                                <p>Get in touch with me</p>
+                            </div>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sidharth Srinivasan. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
 </html>
