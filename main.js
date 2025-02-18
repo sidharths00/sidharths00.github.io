@@ -103,7 +103,7 @@ if (subtitle) {
         if (index < text.length) {
             subtitle.textContent += text.charAt(index);
             index++;
-            setTimeout(typeWriter, 100);
+            setTimeout(typeWriter, 40);
         }
     };
     
