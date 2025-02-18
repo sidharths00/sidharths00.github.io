@@ -175,7 +175,7 @@ section:not(#hero) {
     align-items: flex-start;
     position: relative;
     z-index: 1;
-    padding: 6rem 0 2rem 0;
+    padding: 1rem 0 2rem 0;
 }
 
 .hero-content {
@@ -531,7 +531,7 @@ section:not(#hero) {
 }
 
 #resume-hero {
-    padding: 3rem 0;
+    padding: 6rem 0;
     background-color: var(--bg-primary);
 }
 
@@ -1681,4 +1681,21 @@ html {
 .inline-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+/* Homepage Specific */
+.page-home {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page-home main {
+    height: calc(100vh - var(--nav-height));
+    overflow: hidden;
+}
+
+.page-home #hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
