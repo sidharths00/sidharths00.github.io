@@ -690,12 +690,12 @@ section:not(#hero) {
     background: var(--bg-secondary);
     border-radius: 4px;
     padding: 2rem;
-    transition: transform 0.2s ease;
+    transition: none;
     position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: none;
 }
 
 .project-header {
@@ -791,11 +791,12 @@ section:not(#hero) {
     background: var(--bg-secondary);
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s ease;
+    transition: none;
+    cursor: default;
 }
 
 .project-item:hover {
-    transform: translateY(-4px);
+    transform: none;
 }
 
 .project-content {
@@ -900,14 +901,13 @@ section:not(#hero) {
     border-radius: 4px;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    cursor: pointer;
+    transition: none;
+    cursor: default;
 }
 
 .project-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: none;
+    box-shadow: none;
 }
 
 .project-item h3 {
@@ -1171,14 +1171,13 @@ section:not(#hero) {
     border-radius: 4px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    cursor: pointer;
+    transition: none;
+    cursor: default;
 }
 
 .project-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: none;
+    box-shadow: none;
 }
 
 /* Tech Stack Tags */
