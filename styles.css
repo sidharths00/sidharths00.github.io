@@ -1059,6 +1059,7 @@ section:not(#hero) {
     gap: 1rem;
     align-items: flex-start;
     height: 100%;
+    cursor: pointer;
 }
 
 .page-media .achievement-card:hover {
@@ -1075,6 +1076,7 @@ section:not(#hero) {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .page-media .achievement-content {
@@ -1085,6 +1087,36 @@ section:not(#hero) {
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
     color: var(--text-primary);
+}
+
+.page-media .achievement-content h3 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.page-media .achievement-content h3 a:hover {
+    color: var(--accent-primary);
+}
+
+.page-media .achievement-content h3 a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent-primary);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease;
+}
+
+.page-media .achievement-content h3 a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .page-media .achievement-content p {
@@ -1147,6 +1179,15 @@ section:not(#hero) {
     position: absolute;
     left: 0;
     color: var(--accent-primary);
+}
+
+#entrepreneurial .achievement-card:hover .achievement-icon {
+    transform: scale(1.1);
+    color: var(--accent-primary);
+}
+
+#entrepreneurial .achievement-icon {
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 @media (max-width: 768px) {
