@@ -1,92 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidharth Srinivasan</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidharth Srinivasan</title>
+  <meta name="description" content="Sidharth Srinivasan — Stanford CS, PM at Box, co-founder of Trashbots. Builder at the intersection of technology, entrepreneurship, and creativity.">
+  <meta property="og:title" content="Sidharth Srinivasan">
+  <meta property="og:description" content="Builder at the intersection of technology, entrepreneurship, and creativity.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sidharths.com">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="page-home">
-    <nav>
-        <div class="nav-content">
-            <a href="/" class="logo">Sidharth</a>
-            <ul class="nav-links">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/resume">Resume</a></li>
-                <li><a href="/media">Media</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Sidharth</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#recognition">Recognition</a></li>
+        <li><a href="#beyond">Beyond the CV</a></li>
+        <li>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">
+            LinkedIn
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-left:2px;vertical-align:middle"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li><a href="mailto:sidharth@stanford.edu" class="nav-email">Email</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text fade-up">
+          <span class="greeting">Hi, I'm</span>
+          <h1 class="hero-name">Sidharth<br>Srinivasan.</h1>
+          <p class="hero-descriptor">
+            <span>Stanford CS (AI)</span>
+            <span class="dot">·</span>
+            <span>PM @ Box</span>
+            <span class="dot">·</span>
+            <span>Co-founder, Trashbots</span>
+          </p>
+          <p class="hero-bio">
+            Building thoughtfully at the intersection of technology, entrepreneurship, and creativity. I care about products that make a real difference.
+          </p>
+          <div class="hero-links">
+            <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener" class="hero-link">
+              <!-- LinkedIn icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:sidharth@stanford.edu" class="hero-link">
+              <!-- Email icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              sidharth@stanford.edu
+            </a>
+            <a href="https://github.com/sidharths00" target="_blank" rel="noopener" class="hero-link">
+              <!-- GitHub icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
         </div>
-    </nav>
+        <div class="hero-photo fade-up">
+          <img src="assets/headshot.jpeg" alt="Sidharth Srinivasan" width="220" height="220">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="hero">
-            <div class="section-content">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <p class="greeting">Hi, my name is</p>
-                        <h1>Sidharth Srinivasan</h1>
-                        <p class="subtitle">I love building technology products that solve impactful problems.</p>
-                        <div class="social-links">
-                            <a href="mailto:sidharth@stanford.edu" class="social-link">
-                                <i class="fas fa-envelope"></i>
-                                <span>sidharth@stanford.edu</span>
-                            </a>
-                            <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener noreferrer" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <img src="assets/headshot.jpeg" alt="Sidharth Srinivasan" class="headshot">
-                    </div>
-                </div>
-                
-                <div class="section-links">
-                    <a href="/projects" class="section-link">
-                        <div class="section-link-content">
-                            <i class="fas fa-code"></i>
-                            <div class="section-link-text">
-                                <span class="section-number">01.</span>
-                                <h3>Projects</h3>
-                                <p>View my work in AI, web development, and creative projects</p>
-                            </div>
-                        </div>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="/resume" class="section-link">
-                        <div class="section-link-content">
-                            <i class="fas fa-file-alt"></i>
-                            <div class="section-link-text">
-                                <span class="section-number">02.</span>
-                                <h3>Resume</h3>
-                                <p>See my experience, education, and skills</p>
-                            </div>
-                        </div>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="/media" class="section-link">
-                        <div class="section-link-content">
-                            <i class="fas fa-newspaper"></i>
-                            <div class="section-link-text">
-                                <span class="section-number">03.</span>
-                                <h3>Media</h3>
-                                <p>Features, awards, and press coverage</p>
-                            </div>
-                        </div>
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
+  <!-- ── Projects ────────────────────────────────────────────── -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-desc">A selection of things I've built — from AI tools to a documentary film.</p>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="filter-bar fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="tech">Tech</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="creative">Creative</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="projects-grid">
+
+        <!-- TBlocks -->
+        <article class="project-card fade-up" data-category="tech">
+          <a href="projects/tblocks.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/tblocks1.png" alt="TBlocks interface" loading="lazy">
             </div>
-        </section>
-    </main>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">Tech</span>
+              </div>
+              <h3 class="card-title">TBlocks</h3>
+              <p class="card-subtitle">Block Programming App for Robots</p>
+              <p class="card-desc">A visual coding environment for K–12 students to program Trashbot robots using drag-and-drop blocks. Deployed across 100+ schools.</p>
+              <ul class="card-tags">
+                <li><span class="tag tag--tech">React</span></li>
+                <li><span class="tag tag--tech">Web Bluetooth API</span></li>
+                <li><span class="tag tag--tech">Node.js</span></li>
+              </ul>
+              <span class="card-cta">View Project →</span>
+            </div>
+          </a>
+        </article>
 
-    <script src="main.js"></script>
+        <!-- Chowder -->
+        <article class="project-card fade-up" data-category="ai tech">
+          <a href="projects/chowder.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/chowder/chowder1.png" alt="Chowder dashboard" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">AI · Tech</span>
+                <span class="card-badge">Ongoing</span>
+              </div>
+              <h3 class="card-title">Chowder</h3>
+              <p class="card-subtitle">Smart Course Management</p>
+              <p class="card-desc">Parses syllabi with Claude AI to automatically extract deadlines and deliverables, then builds a personalized student dashboard.</p>
+              <ul class="card-tags">
+                <li><span class="tag tag--ai">Claude API</span></li>
+                <li><span class="tag tag--tech">React</span></li>
+                <li><span class="tag tag--tech">Supabase</span></li>
+              </ul>
+              <span class="card-cta">View Project →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- 2048 Q-Learning -->
+        <article class="project-card fade-up" data-category="ai">
+          <a href="projects/2048-qlearning.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/2048qlearning/2048image1.jpeg" alt="2048 Q-Learning agent" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">AI</span>
+              </div>
+              <h3 class="card-title">2048 Q-Learning</h3>
+              <p class="card-subtitle">Deep Reinforcement Learning Agent</p>
+              <p class="card-desc">Trained a Double Q-learning agent with epsilon-greedy exploration to master the 2048 puzzle game using a neural network policy.</p>
+              <ul class="card-tags">
+                <li><span class="tag tag--ai">Python</span></li>
+                <li><span class="tag tag--ai">TensorFlow</span></li>
+                <li><span class="tag tag--ai">Deep RL</span></li>
+              </ul>
+              <span class="card-cta">View Project →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- TreeTies -->
+        <article class="project-card fade-up" data-category="tech">
+          <a href="projects/treeties.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/treeties/treeties1.png" alt="TreeTies app" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">Tech</span>
+              </div>
+              <h3 class="card-title">TreeTies</h3>
+              <p class="card-subtitle">Campus Events Finder</p>
+              <p class="card-desc">A Stanford campus events platform combining web-scraped listings with community contributions, featuring map and feed views.</p>
+              <ul class="card-tags">
+                <li><span class="tag tag--tech">React</span></li>
+                <li><span class="tag tag--tech">Node.js</span></li>
+                <li><span class="tag tag--tech">Bubble</span></li>
+              </ul>
+              <span class="card-cta">View Project →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- GPT-2 with LoRA -->
+        <article class="project-card fade-up" data-category="ai">
+          <a href="projects/gpt2-lora.html" class="card-link">
+            <div class="card-image">
+              <div class="card-image-placeholder">GPT-2 + LoRA</div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">AI</span>
+                <span class="card-badge">Ongoing</span>
+              </div>
+              <h3 class="card-title">GPT-2 with LoRA</h3>
+              <p class="card-subtitle">Efficient LLM Fine-Tuning</p>
+              <p class="card-desc">Implemented Low-Rank Adaptation (LoRA) from scratch on GPT-2, enabling parameter-efficient fine-tuning with a fraction of the compute.</p>
+              <ul class="card-tags">
+                <li><span class="tag tag--ai">PyTorch</span></li>
+                <li><span class="tag tag--ai">LoRA</span></li>
+                <li><span class="tag tag--ai">Transformers</span></li>
+              </ul>
+              <span class="card-cta">View Project →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Agentic Travel Assistant -->
+        <article class="project-card fade-up" data-category="ai">
+          <a href="projects/travel-assistant.html" class="card-link">
+            <div class="card-image">
+              <div class="card-image-placeholder">Agentic Travel</div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">AI</span>
+                <span class="card-badge">Ongoing</span>
+              </div>
+              <h3 class="card-title">Agentic Travel Assistant</h3>
+              <p class="card-subtitle">Conversational Flight Booking</p>
+              <p class="card-desc">An AI agent that books flights through natural conversation — handles multi-leg trips, preference learning, and real-time fare lookup.</p>
+              <ul class="card-tags">
+                <li><span class="tag tag--ai">OpenAI API</span></li>
+                <li><span class="tag tag--ai">Python</span></li>
+                <li><span class="tag tag--tech">Flight APIs</span></li>
+              </ul>
+              <span class="card-cta">View Project →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Tashi Delek -->
+        <article class="project-card fade-up" data-category="creative">
+          <a href="projects/tashi-delek.html" class="card-link">
+            <div class="card-image">
+              <div class="card-image-placeholder">Tashi Delek</div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">Creative · Film</span>
+              </div>
+              <h3 class="card-title">Tashi Delek</h3>
+              <p class="card-subtitle">Short Documentary Film</p>
+              <p class="card-desc">A short documentary exploring happiness, culture, and the concept of GNH (Gross National Happiness) in Bhutan. Screened at Indie Meme Film Festival.</p>
+              <ul class="card-tags">
+                <li><span class="tag tag--creative">Documentary</span></li>
+                <li><span class="tag tag--creative">Bhutan</span></li>
+                <li><span class="tag tag--creative">Festival</span></li>
+              </ul>
+              <span class="card-cta">View Project →</span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Recognition ─────────────────────────────────────────── -->
+  <section id="recognition">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Achievements</span>
+        <h2 class="section-title">Recognition</h2>
+      </div>
+
+      <!-- Press banner -->
+      <div class="press-banner fade-up">
+        <p class="press-banner-label">Press Coverage</p>
+        <div class="press-links">
+          <a href="https://www.entrepreneur.com/growing-a-business/the-16-most-promising-young-entrepreneurs-of-2018/309482" target="_blank" rel="noopener">Entrepreneur Magazine ↗</a>
+          <a href="https://www.texasmonthly.com/news-politics/15-innovators-reshaping-texas/" target="_blank" rel="noopener">Texas Monthly ↗</a>
+          <a href="https://austininno.com/2018/07/18/austin-inno-25-under-25-2018/" target="_blank" rel="noopener">Austin Inno 25 Under 25 ↗</a>
+          <a href="#" target="_blank" rel="noopener">CBS / Fox / Cheddar TV</a>
+          <a href="#" target="_blank" rel="noopener">Sirius XM</a>
+          <a href="#" target="_blank" rel="noopener">Austin Business Journal</a>
+        </div>
+      </div>
+
+      <!-- Recognition cards -->
+      <div class="rec-grid">
+
+        <div class="rec-card fade-up">
+          <span class="rec-label">Patent</span>
+          <h3 class="rec-title">US Patent #11,024,197</h3>
+          <p class="rec-desc">Trashbots educational robot system — hardware components and control architecture.</p>
+        </div>
+
+        <div class="rec-card fade-up">
+          <span class="rec-label">Patent</span>
+          <h3 class="rec-title">US Patent #12,154,449</h3>
+          <p class="rec-desc">Trashbots proprietary software platform and programming interface.</p>
+        </div>
+
+        <div class="rec-card fade-up">
+          <span class="rec-label">Entrepreneurship</span>
+          <h3 class="rec-title">Top 16 Teen Entrepreneurs</h3>
+          <p class="rec-desc">Named one of the 16 Most Promising Young Entrepreneurs by Entrepreneur Magazine (2018).</p>
+        </div>
+
+        <div class="rec-card fade-up">
+          <span class="rec-label">Speaking</span>
+          <h3 class="rec-title">International Keynote Speaker</h3>
+          <p class="rec-desc">Keynote at Empredil (Chile), Houston Tech Rodeo, ISTE, TCEA, and SXSWedu on edtech and entrepreneurship.</p>
+        </div>
+
+        <div class="rec-card fade-up">
+          <span class="rec-label">Music</span>
+          <h3 class="rec-title">Marie Gibson Prize</h3>
+          <p class="rec-desc">Texas All-State qualifier (3 years) and Top 3 Bass vocalist at NATS national competition.</p>
+        </div>
+
+        <div class="rec-card fade-up">
+          <span class="rec-label">Impact</span>
+          <h3 class="rec-title">$400K+ in STEM Outreach</h3>
+          <p class="rec-desc">Trashbots reached 100+ schools, bringing hands-on robotics to underserved communities nationwide.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Beyond the CV ────────────────────────────────────────── -->
+  <section id="beyond">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">The Full Picture</span>
+        <h2 class="section-title">Beyond the CV</h2>
+        <p class="section-desc">The things that shape how I think and build.</p>
+      </div>
+
+      <div class="beyond-grid">
+
+        <div class="beyond-card fade-up">
+          <div class="beyond-icon">🎬</div>
+          <h3 class="beyond-title">Film</h3>
+          <p class="beyond-body">
+            Directed <em>Tashi Delek</em>, a short documentary exploring happiness and GNH culture in Bhutan. Screened at the Indie Meme Film Festival. Filmmaking taught me to see the human story inside every complex system.
+          </p>
+          <a href="projects/tashi-delek.html" class="beyond-link">Watch the film →</a>
+        </div>
+
+        <div class="beyond-card fade-up">
+          <div class="beyond-icon">🎵</div>
+          <h3 class="beyond-title">Music</h3>
+          <p class="beyond-body">
+            Bass vocalist — Marie Gibson Prize recipient, three-time Texas All-State qualifier, Top 3 at NATS nationals. Performed with Stanford Raagapella and Conspirare. Music and engineering aren't that different: both are about listening carefully.
+          </p>
+        </div>
+
+        <div class="beyond-card fade-up">
+          <div class="beyond-icon">🏔</div>
+          <h3 class="beyond-title">Adventure</h3>
+          <p class="beyond-body">
+            Summited Mount Kilimanjaro. Active boulderer and global traveler — taught STEM workshops internationally, performed keynotes in Chile, and explored Bhutan for the film. Best ideas come from being somewhere unfamiliar.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-name">Sidharth Srinivasan</p>
+          <p class="footer-role">Stanford CS · PM @ Box · Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:sidharth@stanford.edu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            sidharth@stanford.edu
+          </a>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/sidharths00" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <p class="footer-copy">© 2026 Sidharth Srinivasan · Built with care, no frameworks</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

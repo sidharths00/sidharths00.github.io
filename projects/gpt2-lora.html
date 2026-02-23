@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPT-2 with LoRA — Sidharth Srinivasan</title>
+  <meta name="description" content="GPT-2 fine-tuning with Low-Rank Adaptation (LoRA) — implementing parameter-efficient training from scratch.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Sidharth</a>
+      <ul class="nav-links">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#recognition">Recognition</a></li>
+        <li><a href="/#beyond">Beyond the CV</a></li>
+        <li>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-left:2px;vertical-align:middle"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li><a href="mailto:sidharth@stanford.edu" class="nav-email">Email</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <a href="/#projects" class="detail-back">← Back to Projects</a>
+
+      <div class="detail-hero">
+        <div class="detail-meta">
+          <span class="tag tag--ai">AI</span>
+          <span class="card-badge" style="margin-left:0.25rem;">Ongoing</span>
+        </div>
+        <h1 class="detail-title">GPT-2 with LoRA</h1>
+        <p class="detail-subtitle">Parameter-Efficient LLM Fine-Tuning from Scratch</p>
+        <div class="detail-tags">
+          <span class="tag tag--ai">PyTorch</span>
+          <span class="tag tag--ai">LoRA</span>
+          <span class="tag tag--ai">Transformers</span>
+          <span class="tag tag--ai">Deep Learning</span>
+        </div>
+      </div>
+
+      <div class="detail-cover">
+        <div class="card-image-placeholder">GPT-2 + LoRA</div>
+      </div>
+
+      <div class="detail-body">
+        <div class="detail-content">
+          <h2>Overview</h2>
+          <p>
+            Fine-tuning large language models is expensive. Full fine-tuning of GPT-2 means updating all ~117M parameters — not feasible on consumer hardware. Low-Rank Adaptation (LoRA), introduced by Hu et al. (2021), offers a clever solution: freeze the original model weights and inject small trainable rank-decomposition matrices into the attention layers. The result is a fine-tuned model using as few as 0.1% of the original parameters.
+          </p>
+          <p>
+            This project implements LoRA from scratch in PyTorch and applies it to GPT-2, with the goal of deeply understanding the technique rather than using an existing library like PEFT.
+          </p>
+
+          <h2>How LoRA Works</h2>
+          <p>
+            For a weight matrix <code>W ∈ ℝ^(d×k)</code>, LoRA introduces two low-rank matrices <code>A ∈ ℝ^(d×r)</code> and <code>B ∈ ℝ^(r×k)</code> where rank <code>r ≪ min(d, k)</code>. During forward pass, the effective weight becomes <code>W + BA</code>. Only A and B are trained; W is frozen.
+          </p>
+          <p>
+            This means a rank-8 LoRA on GPT-2's attention projection layers adds only ~300K trainable parameters versus the 12M+ you'd update in the original matrices.
+          </p>
+
+          <h2>Implementation</h2>
+          <ul>
+            <li>Built a <code>LoRALinear</code> module that wraps <code>nn.Linear</code> and injects the low-rank matrices.</li>
+            <li>Modified the GPT-2 attention blocks to swap in <code>LoRALinear</code> for Q and V projections.</li>
+            <li>Implemented parameter freezing logic to ensure only LoRA matrices receive gradients.</li>
+            <li>Fine-tuned on a small domain-specific dataset to validate behavioral shift with minimal compute.</li>
+          </ul>
+
+          <h2>Status</h2>
+          <p>
+            Core LoRA implementation is complete and validated. Current work is focused on comparing different rank choices and testing on more diverse fine-tuning datasets, as well as extending to GPT-2 Medium for scale comparison.
+          </p>
+        </div>
+
+        <aside class="detail-sidebar">
+          <p class="sidebar-section-label">Status</p>
+          <p style="font-size:var(--text-sm);color:var(--text-secondary);">Ongoing — core implementation complete</p>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Stack</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+            <span class="tag tag--ai">PyTorch</span>
+            <span class="tag tag--ai">LoRA</span>
+            <span class="tag tag--ai">Transformers</span>
+          </div>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Reference</p>
+          <div class="sidebar-links">
+            <a href="https://arxiv.org/abs/2106.09685" target="_blank" rel="noopener" class="sidebar-link">LoRA Paper (Hu et al.) →</a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="detail-nav">
+        <a href="treeties.html" class="detail-nav-link">← TreeTies</a>
+        <a href="travel-assistant.html" class="detail-nav-link">Travel Assistant →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-name">Sidharth Srinivasan</p>
+          <p class="footer-role">Stanford CS · PM @ Box · Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:sidharth@stanford.edu">sidharth@stanford.edu</a>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="footer-copy">© 2026 Sidharth Srinivasan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

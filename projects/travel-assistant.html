@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic Travel Assistant — Sidharth Srinivasan</title>
+  <meta name="description" content="An AI agent that books flights through natural conversation — handles multi-leg trips, preferences, and real-time fare lookup.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Sidharth</a>
+      <ul class="nav-links">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#recognition">Recognition</a></li>
+        <li><a href="/#beyond">Beyond the CV</a></li>
+        <li>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-left:2px;vertical-align:middle"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li><a href="mailto:sidharth@stanford.edu" class="nav-email">Email</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <a href="/#projects" class="detail-back">← Back to Projects</a>
+
+      <div class="detail-hero">
+        <div class="detail-meta">
+          <span class="tag tag--ai">AI</span>
+          <span class="card-badge" style="margin-left:0.25rem;">Ongoing</span>
+        </div>
+        <h1 class="detail-title">Agentic Travel Assistant</h1>
+        <p class="detail-subtitle">Conversational Flight Booking with Real-Time Fares</p>
+        <div class="detail-tags">
+          <span class="tag tag--ai">OpenAI API</span>
+          <span class="tag tag--ai">Python</span>
+          <span class="tag tag--tech">Flight APIs</span>
+          <span class="tag tag--ai">NLP</span>
+        </div>
+      </div>
+
+      <div class="detail-cover">
+        <div class="card-image-placeholder">Agentic Travel</div>
+      </div>
+
+      <div class="detail-body">
+        <div class="detail-content">
+          <h2>Overview</h2>
+          <p>
+            Booking a flight is still frustratingly transactional. You navigate to a search engine, fill out a form, filter through hundreds of results, and repeat for each leg. This project builds a conversational AI agent that handles the entire booking flow through natural language — you just describe your trip.
+          </p>
+          <p>
+            Say something like: <em>"I need to get from San Francisco to Austin on the 15th, coming back the 19th, and I want to avoid layovers if it's under $400"</em> — and the agent handles the rest.
+          </p>
+
+          <h2>Architecture</h2>
+          <p>
+            The assistant is built using OpenAI's function-calling API, which lets the model decide when to invoke real tools. The agent has access to several tools:
+          </p>
+          <ul>
+            <li><strong>search_flights:</strong> Queries a flight search API with parsed parameters (origin, destination, dates, cabin class).</li>
+            <li><strong>filter_results:</strong> Applies user preference constraints (max stops, price ceiling, airline preferences).</li>
+            <li><strong>get_fare_details:</strong> Fetches detailed pricing for a specific flight option.</li>
+            <li><strong>confirm_booking:</strong> Initiates the booking flow once the user selects a flight.</li>
+          </ul>
+          <p>
+            The conversation manager maintains context across the session so the user can refine their request ("actually, can you find something earlier in the morning?") without starting over.
+          </p>
+
+          <h2>Status</h2>
+          <p>
+            The core agent loop, flight search integration, and preference filtering are working. Current focus is on improving handling of ambiguous inputs, adding multi-city trip support, and building out a lightweight web UI for demos.
+          </p>
+        </div>
+
+        <aside class="detail-sidebar">
+          <p class="sidebar-section-label">Status</p>
+          <p style="font-size:var(--text-sm);color:var(--text-secondary);">Ongoing — core flow working, UI in progress</p>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Stack</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+            <span class="tag tag--ai">OpenAI API</span>
+            <span class="tag tag--ai">Python</span>
+            <span class="tag tag--tech">Flight APIs</span>
+            <span class="tag tag--ai">NLP</span>
+          </div>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Context</p>
+          <p style="font-size:var(--text-sm);color:var(--text-secondary);">Stanford CS — Agentic AI systems coursework</p>
+        </aside>
+      </div>
+
+      <div class="detail-nav">
+        <a href="gpt2-lora.html" class="detail-nav-link">← GPT-2 + LoRA</a>
+        <a href="tashi-delek.html" class="detail-nav-link">Tashi Delek →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-name">Sidharth Srinivasan</p>
+          <p class="footer-role">Stanford CS · PM @ Box · Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:sidharth@stanford.edu">sidharth@stanford.edu</a>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="footer-copy">© 2026 Sidharth Srinivasan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

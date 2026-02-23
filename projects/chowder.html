@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chowder — Sidharth Srinivasan</title>
+  <meta name="description" content="Chowder — AI-powered course management that parses syllabi with Claude and builds personalized student dashboards.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Sidharth</a>
+      <ul class="nav-links">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#recognition">Recognition</a></li>
+        <li><a href="/#beyond">Beyond the CV</a></li>
+        <li>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-left:2px;vertical-align:middle"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li><a href="mailto:sidharth@stanford.edu" class="nav-email">Email</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <a href="/#projects" class="detail-back">← Back to Projects</a>
+
+      <div class="detail-hero">
+        <div class="detail-meta">
+          <span class="tag tag--ai">AI</span>
+          <span class="tag tag--tech">Tech</span>
+          <span class="card-badge" style="margin-left:0.25rem;">Ongoing</span>
+        </div>
+        <h1 class="detail-title">Chowder</h1>
+        <p class="detail-subtitle">Smart Course Management, Powered by Claude AI</p>
+        <div class="detail-tags">
+          <span class="tag tag--ai">Claude API</span>
+          <span class="tag tag--tech">React</span>
+          <span class="tag tag--tech">Supabase</span>
+          <span class="tag tag--tech">Node.js</span>
+          <span class="tag tag--ai">NLP</span>
+        </div>
+      </div>
+
+      <div class="detail-cover">
+        <img src="../assets/chowder/chowder1.png" alt="Chowder dashboard" loading="lazy">
+      </div>
+
+      <div class="detail-body">
+        <div class="detail-content">
+          <h2>Overview</h2>
+          <p>
+            Every college student dreads the first week of the semester: five syllabi, each structured differently, none talking to each other. Chowder solves this by automatically parsing course syllabi using Claude's API and extracting all deadlines, deliverables, and course expectations into a unified, personalized dashboard.
+          </p>
+          <p>
+            Students upload their syllabi (PDF or text), and within seconds their dashboard populates with a prioritized timeline of everything due — exams, papers, projects, readings — across all their courses. It's the personal academic assistant that should have existed years ago.
+          </p>
+
+          <h2>How It Works</h2>
+          <p>
+            Syllabus documents are passed to Claude's API with structured prompts that instruct it to extract: assignment names, due dates, point values, and course metadata. Claude handles the variability in formatting (some professors write syllabi in tables; others in prose paragraphs) gracefully.
+          </p>
+          <p>
+            Extracted data is normalized and stored in Supabase, then surfaced in a React dashboard with views organized by week, course, or deadline priority. Users can also add manual events and set personal reminders.
+          </p>
+
+          <h2>Current State</h2>
+          <p>
+            Chowder is in active development with a working prototype used by a small group of Stanford students. Current work is focused on improving extraction accuracy for edge-case syllabi formats, building out the mobile-responsive experience, and adding calendar integration.
+          </p>
+        </div>
+
+        <aside class="detail-sidebar">
+          <p class="sidebar-section-label">Status</p>
+          <p style="font-size:var(--text-sm);color:var(--text-secondary);">Ongoing — prototype in use at Stanford</p>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Stack</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+            <span class="tag tag--ai">Claude API</span>
+            <span class="tag tag--tech">React</span>
+            <span class="tag tag--tech">Supabase</span>
+            <span class="tag tag--tech">Node.js</span>
+            <span class="tag tag--ai">NLP</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="detail-gallery">
+        <h2>Screenshots</h2>
+        <div class="gallery-grid">
+          <img src="../assets/chowder/chowder1.png" alt="Chowder dashboard view" loading="lazy">
+          <img src="../assets/chowder/chowder2.png" alt="Chowder course detail" loading="lazy">
+        </div>
+      </div>
+
+      <div class="detail-nav">
+        <a href="tblocks.html" class="detail-nav-link">← TBlocks</a>
+        <a href="2048-qlearning.html" class="detail-nav-link">2048 Q-Learning →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-name">Sidharth Srinivasan</p>
+          <p class="footer-role">Stanford CS · PM @ Box · Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:sidharth@stanford.edu">sidharth@stanford.edu</a>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="footer-copy">© 2026 Sidharth Srinivasan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

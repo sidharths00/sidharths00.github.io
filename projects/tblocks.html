@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TBlocks — Sidharth Srinivasan</title>
+  <meta name="description" content="TBlocks — a visual block programming environment for K-12 students to code Trashbot robots.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Sidharth</a>
+      <ul class="nav-links">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#recognition">Recognition</a></li>
+        <li><a href="/#beyond">Beyond the CV</a></li>
+        <li>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-left:2px;vertical-align:middle"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li><a href="mailto:sidharth@stanford.edu" class="nav-email">Email</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <a href="/#projects" class="detail-back">← Back to Projects</a>
+
+      <div class="detail-hero">
+        <div class="detail-meta">
+          <span class="tag tag--tech">Tech</span>
+        </div>
+        <h1 class="detail-title">TBlocks</h1>
+        <p class="detail-subtitle">Block Programming App for Trashbot Robots</p>
+        <div class="detail-tags">
+          <span class="tag tag--tech">React</span>
+          <span class="tag tag--tech">Web Bluetooth API</span>
+          <span class="tag tag--tech">Node.js</span>
+          <span class="tag tag--tech">K-12 Education</span>
+        </div>
+      </div>
+
+      <div class="detail-cover">
+        <img src="../assets/tblocks1.png" alt="TBlocks visual programming interface" loading="lazy">
+      </div>
+
+      <div class="detail-body">
+        <div class="detail-content">
+          <h2>Overview</h2>
+          <p>
+            TBlocks is the custom visual programming language built for Trashbots — the educational robotics platform I co-founded. Inspired by Scratch and Blockly, TBlocks lets K–12 students program physical Trashbot robots using a drag-and-drop block interface, without needing to write a single line of code.
+          </p>
+          <p>
+            The app runs entirely in the browser and communicates with the robot hardware over Bluetooth using the Web Bluetooth API — no app installs, no drivers, just a Chromebook and a robot. This was a critical design constraint: schools needed a zero-friction setup.
+          </p>
+
+          <h2>How It Works</h2>
+          <p>
+            Students drag blocks from a palette onto a canvas — blocks like "move forward", "spin motor", "sense light", and "if obstacle then stop". The block program is compiled in the browser to a bytecode representation, which is then transmitted to the Trashbot microcontroller via BLE (Bluetooth Low Energy).
+          </p>
+          <p>
+            The curriculum integrates with Trashbots' lesson plans across grades 2–12, scaling from basic sequences for younger students to loops, conditionals, and sensor-based logic for middle and high schoolers.
+          </p>
+
+          <h2>Impact</h2>
+          <p>
+            TBlocks is deployed across 100+ schools and has been used by tens of thousands of students. It's a core part of Trashbots' $400K+ in product sales and was key to winning partnerships with school districts across Texas and beyond.
+          </p>
+        </div>
+
+        <aside class="detail-sidebar">
+          <p class="sidebar-section-label">Links</p>
+          <div class="sidebar-links">
+            <a href="https://tblocks.trashbots.co" target="_blank" rel="noopener" class="sidebar-link">Live Demo →</a>
+            <a href="https://trashbots.co" target="_blank" rel="noopener" class="sidebar-link">Trashbots.co →</a>
+          </div>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Stack</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+            <span class="tag tag--tech">React</span>
+            <span class="tag tag--tech">Web Bluetooth API</span>
+            <span class="tag tag--tech">Node.js</span>
+          </div>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Status</p>
+          <p style="font-size:var(--text-sm);color:var(--text-secondary);">Live & in active use across 100+ schools</p>
+        </aside>
+      </div>
+
+      <div class="detail-nav">
+        <a href="/#projects" class="detail-nav-link">← All Projects</a>
+        <a href="chowder.html" class="detail-nav-link">Chowder →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-name">Sidharth Srinivasan</p>
+          <p class="footer-role">Stanford CS · PM @ Box · Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:sidharth@stanford.edu">sidharth@stanford.edu</a>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="footer-copy">© 2026 Sidharth Srinivasan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TreeTies — Sidharth Srinivasan</title>
+  <meta name="description" content="TreeTies — a Stanford campus events finder combining web scraping with community contributions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Sidharth</a>
+      <ul class="nav-links">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#recognition">Recognition</a></li>
+        <li><a href="/#beyond">Beyond the CV</a></li>
+        <li>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-left:2px;vertical-align:middle"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li><a href="mailto:sidharth@stanford.edu" class="nav-email">Email</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <a href="/#projects" class="detail-back">← Back to Projects</a>
+
+      <div class="detail-hero">
+        <div class="detail-meta">
+          <span class="tag tag--tech">Tech</span>
+        </div>
+        <h1 class="detail-title">TreeTies</h1>
+        <p class="detail-subtitle">Campus Events Finder for Stanford Students</p>
+        <div class="detail-tags">
+          <span class="tag tag--tech">React</span>
+          <span class="tag tag--tech">Node.js</span>
+          <span class="tag tag--tech">Bubble</span>
+          <span class="tag tag--tech">Web Scraping</span>
+        </div>
+      </div>
+
+      <div class="detail-cover">
+        <img src="../assets/treeties/treeties1.png" alt="TreeTies app interface" loading="lazy">
+      </div>
+
+      <div class="detail-body">
+        <div class="detail-content">
+          <h2>Overview</h2>
+          <p>
+            Stanford has hundreds of events happening every week — club meetings, speaker series, free food, performances, hackathons — scattered across dozens of different mailing lists, websites, and social channels. TreeTies aggregates them all into one discoverable feed.
+          </p>
+          <p>
+            The platform combines two sources: automated web scraping of official Stanford event pages (the Stanford Events Calendar, department listings, and student org sites), and a community contribution layer where students can post events that the scrapers might miss.
+          </p>
+
+          <h2>Features</h2>
+          <ul>
+            <li><strong>Feed view:</strong> A chronological list of upcoming events with filters by category, date, and location.</li>
+            <li><strong>Map view:</strong> Events plotted on an interactive campus map — useful for finding what's happening nearby right now.</li>
+            <li><strong>Community posts:</strong> Any Stanford student can submit an event. Submissions go through a lightweight moderation queue.</li>
+            <li><strong>Save & RSVP:</strong> Users can save events to their personal calendar and get reminder notifications.</li>
+          </ul>
+
+          <h2>Technical Approach</h2>
+          <p>
+            The scraper runs on a Node.js backend, using a scheduled job to crawl and parse target pages. Data is cleaned and deduplicated before being stored. The frontend is a React app with a responsive two-panel layout. An early prototype was built in Bubble for rapid validation before moving to a custom stack.
+          </p>
+        </div>
+
+        <aside class="detail-sidebar">
+          <p class="sidebar-section-label">Stack</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+            <span class="tag tag--tech">React</span>
+            <span class="tag tag--tech">Node.js</span>
+            <span class="tag tag--tech">Bubble</span>
+          </div>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Context</p>
+          <p style="font-size:var(--text-sm);color:var(--text-secondary);">Stanford student project — solving a real campus pain point</p>
+        </aside>
+      </div>
+
+      <div class="detail-gallery">
+        <h2>Screenshots</h2>
+        <div class="gallery-grid">
+          <img src="../assets/treeties/treeties1.png" alt="TreeTies feed view" loading="lazy">
+          <img src="../assets/treeties/treeties2.png" alt="TreeTies map view" loading="lazy">
+          <img src="../assets/treeties/treeties3.png" alt="TreeTies event detail" loading="lazy">
+        </div>
+      </div>
+
+      <div class="detail-nav">
+        <a href="2048-qlearning.html" class="detail-nav-link">← 2048 Q-Learning</a>
+        <a href="gpt2-lora.html" class="detail-nav-link">GPT-2 + LoRA →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-name">Sidharth Srinivasan</p>
+          <p class="footer-role">Stanford CS · PM @ Box · Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:sidharth@stanford.edu">sidharth@stanford.edu</a>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="footer-copy">© 2026 Sidharth Srinivasan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
