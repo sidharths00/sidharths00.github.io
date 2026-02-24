@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EA Agent — Sidharth Srinivasan</title>
+  <meta name="description" content="EA Agent — an autonomous AI scheduling assistant that lives in your inbox and handles meeting coordination end-to-end.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Sidharth</a>
+      <ul class="nav-links">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#recognition">Recognition</a></li>
+        <li><a href="/#beyond">Beyond the CV</a></li>
+        <li>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;margin-left:2px;vertical-align:middle"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li><a href="mailto:sidharth@stanford.edu" class="nav-email">Email</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <a href="/#projects" class="detail-back">← Back to Projects</a>
+
+      <div class="detail-hero">
+        <div class="detail-meta">
+          <span class="tag tag--ai">AI</span>
+        </div>
+        <h1 class="detail-title">EA Agent</h1>
+        <p class="detail-subtitle">Autonomous Email-Based Scheduling Assistant</p>
+        <div class="detail-tags">
+          <span class="tag tag--ai">Claude API</span>
+          <span class="tag tag--tech">TypeScript</span>
+          <span class="tag tag--tech">Node.js</span>
+          <span class="tag tag--tech">Google Calendar API</span>
+          <span class="tag tag--tech">AgentMail</span>
+        </div>
+      </div>
+
+      <div class="detail-cover">
+        <div class="card-image-placeholder">EA Agent</div>
+      </div>
+
+      <div class="detail-body">
+        <div class="detail-content">
+          <h2>Overview</h2>
+          <p>
+            Scheduling meetings is one of the most mindless yet time-consuming tasks in professional life — a perfect problem for an AI agent to own completely. EA Agent sits in your inbox and handles meeting coordination end-to-end, entirely through email.
+          </p>
+          <p>
+            CC the agent on any email thread, and it takes over: it reads the conversation context, checks your Google Calendar for real availability, proposes 3–5 concrete time slots to participants, waits for confirmation, and then books the event and sends confirmations — all without you touching it again. You can also email it directly to query your schedule or update your preferences in plain English.
+          </p>
+
+          <h2>Architecture</h2>
+          <p>
+            The system is built around an agentic loop where Claude autonomously decides which tools to invoke based on the current state of an email thread. The agent has access to:
+          </p>
+          <ul>
+            <li><strong>read_thread:</strong> Pulls conversation history and extracts scheduling intent, participants, and constraints.</li>
+            <li><strong>check_calendar:</strong> Queries Google Calendar API to find open windows within working hours.</li>
+            <li><strong>propose_times:</strong> Composes and sends an email with 3–5 concrete options formatted for easy one-click confirmation.</li>
+            <li><strong>book_event:</strong> Creates the calendar event, sends invites, and notifies all participants.</li>
+            <li><strong>update_event:</strong> Handles rescheduling by modifying existing events rather than deleting and recreating — preserving participant history.</li>
+          </ul>
+          <p>
+            Conversation state is tracked in SQLite with a simple state machine: <code>new → awaiting_confirmation → booked | cancelled</code>. Email delivery and webhook handling runs through AgentMail.
+          </p>
+
+          <h2>Customization</h2>
+          <p>
+            Scheduling behavior is fully configurable: working hours, preferred meeting durations, buffer times between meetings, video platform preference (Zoom, Meet, etc.), max meetings per day, and blackout periods. Users can adjust any of these by emailing the agent a natural language instruction — no settings UI needed.
+          </p>
+        </div>
+
+        <aside class="detail-sidebar">
+          <p class="sidebar-section-label">Links</p>
+          <div class="sidebar-links">
+            <a href="https://github.com/sidharths00/ea-agent" target="_blank" rel="noopener" class="sidebar-link">GitHub →</a>
+          </div>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Stack</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+            <span class="tag tag--ai">Claude API</span>
+            <span class="tag tag--tech">TypeScript</span>
+            <span class="tag tag--tech">Node.js</span>
+            <span class="tag tag--tech">Google Calendar API</span>
+            <span class="tag tag--tech">AgentMail</span>
+            <span class="tag tag--tech">SQLite</span>
+            <span class="tag tag--tech">Railway</span>
+          </div>
+          <div class="sidebar-divider"></div>
+          <p class="sidebar-section-label">Category</p>
+          <p style="font-size:var(--text-sm);color:var(--text-secondary);">Agentic AI · Productivity tooling</p>
+        </aside>
+      </div>
+
+      <div class="detail-nav">
+        <a href="gpt2-lora.html" class="detail-nav-link">← GPT-2 + LoRA</a>
+        <a href="tashi-delek.html" class="detail-nav-link">Tashi Delek →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-name">Sidharth Srinivasan</p>
+          <p class="footer-role">Stanford CS · PM @ Box · Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:sidharth@stanford.edu">sidharth@stanford.edu</a>
+          <a href="https://linkedin.com/in/sidharths00" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="footer-copy">© 2026 Sidharth Srinivasan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

@@ -36,7 +36,6 @@
       <div class="detail-hero">
         <div class="detail-meta">
           <span class="tag tag--ai">AI</span>
-          <span class="card-badge" style="margin-left:0.25rem;">Ongoing</span>
         </div>
         <h1 class="detail-title">GPT-2 with LoRA</h1>
         <p class="detail-subtitle">Parameter-Efficient LLM Fine-Tuning from Scratch</p>
@@ -78,15 +77,17 @@
             <li>Fine-tuned on a small domain-specific dataset to validate behavioral shift with minimal compute.</li>
           </ul>
 
-          <h2>Status</h2>
+          <h2>Results</h2>
           <p>
-            Core LoRA implementation is complete and validated. Current work is focused on comparing different rank choices and testing on more diverse fine-tuning datasets, as well as extending to GPT-2 Medium for scale comparison.
+            Core LoRA implementation is complete and validated. Compared multiple rank choices (r=4, 8, 16) and tested on diverse fine-tuning datasets to measure behavioral shift relative to compute cost. The project is part of Stanford's CS224N (NLP with Deep Learning) coursework.
           </p>
         </div>
 
         <aside class="detail-sidebar">
-          <p class="sidebar-section-label">Status</p>
-          <p style="font-size:var(--text-sm);color:var(--text-secondary);">Ongoing — core implementation complete</p>
+          <p class="sidebar-section-label">Links</p>
+          <div class="sidebar-links">
+            <a href="https://github.com/sidharths00/cs224n-gpt-explora" target="_blank" rel="noopener" class="sidebar-link">GitHub →</a>
+          </div>
           <div class="sidebar-divider"></div>
           <p class="sidebar-section-label">Stack</p>
           <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
@@ -104,7 +105,7 @@
 
       <div class="detail-nav">
         <a href="treeties.html" class="detail-nav-link">← TreeTies</a>
-        <a href="travel-assistant.html" class="detail-nav-link">Travel Assistant →</a>
+        <a href="ea-agent.html" class="detail-nav-link">EA Agent →</a>
       </div>
     </div>
   </main>
