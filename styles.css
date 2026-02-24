@@ -140,12 +140,6 @@ section:first-of-type { border-top: none; }
   margin-bottom: 1.25rem;
 }
 
-.hero-descriptor {
-  font-size: 0.875rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
 .hero-bio {
   font-size: 1rem;
   color: var(--secondary);
@@ -160,8 +154,13 @@ section:first-of-type { border-top: none; }
 
 .hero-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1.25rem;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 1.25rem;
 }
 
 .hero-links a {
