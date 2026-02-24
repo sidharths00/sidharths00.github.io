@@ -157,10 +157,16 @@ section:first-of-type { border-top: none; }
 .hero-links a {
   font-size: 0.875rem;
   color: var(--secondary);
-  transition: color 0.15s;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border);
+  transition: color 0.15s, text-decoration-color 0.15s;
 }
 
-.hero-links a:hover { color: var(--accent); }
+.hero-links a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
 
 /* ── Experience ─────────────────────────────────────────────── */
 .exp-list { display: flex; flex-direction: column; gap: 1.5rem; }
