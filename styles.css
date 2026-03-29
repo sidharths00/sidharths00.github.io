@@ -334,6 +334,12 @@ footer {
 .footer-links a { font-size: 0.75rem; color: var(--muted); transition: color 0.15s; }
 .footer-links a:hover { color: var(--text); }
 
+.chaos-btn { font-size: 0.85rem; color: var(--muted); transition: color 0.15s; padding: 0; }
+.chaos-btn:hover { color: var(--text); }
+.chaos-btn:disabled { opacity: 0.35; cursor: default; }
+
+.chaos-char { display: inline-block; }
+
 /* ── Theme toggle ───────────────────────────────────────────── */
 .theme-toggle {
   display: flex;
@@ -408,3 +414,20 @@ footer {
 [data-theme="dark"] #site-nav { background: rgba(28,24,20,0.92); }
 [data-theme="dark"] .toggle-thumb { transform: translateX(26px); }
 [data-theme="dark"] .toggle-track { background: #3D3430; }
+
+/* ── Dark mode transition (View Transitions API) ────────────── */
+@keyframes vt-blur-out {
+  to { opacity: 0; filter: blur(10px); transform: scale(1.01); }
+}
+@keyframes vt-blur-in {
+  from { opacity: 0; filter: blur(14px); transform: scale(0.99); }
+  to   { opacity: 1; filter: blur(0);    transform: scale(1); }
+}
+
+::view-transition-old(root) { animation: vt-blur-out 0.25s ease-in forwards; }
+::view-transition-new(root) { animation: vt-blur-in  0.45s ease-out 0.15s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-new(root),
+  ::view-transition-old(root) { animation: none; }
+}
